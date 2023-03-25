@@ -22,21 +22,21 @@ body {
     justify-content: space-between;
 }
 
-.content .image {
+.content .box {
     width: 320px;
     height: auto;
     overflow: hidden;
     border-radius: 16px 0 0 16px;
 }
 
-.content .image img {
+.content .box img {
     max-width: 100%;
     height: 100%;
     object-fit: cover;
     transition: 400ms ease-in;
 }
 
-.content .image img:hover {
+.content .box img:hover {
     transform: scale(1.1);
     filter: brightness(80%);
 }
@@ -62,6 +62,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     line-height: 2rem;
+    padding-right: 20px;
 }
 
 .content .perfum p {
@@ -111,4 +112,61 @@ body {
 .content .perfum a .bx {
     font-size: 1.1rem;
     padding-right: 10px;
+}
+
+/*MEDIAQUERY*/
+
+@media screen and (max-width: 420px) {
+    .content {
+        margin: 20px auto;
+        width: 375px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content .box {
+        width: 375px;
+        height: 250px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .content .box img {
+        width: 100%;
+        height: auto;
+        transition: 0ms;
+    }
+
+    .content .box img:hover {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+
+    .content .perfum {
+        width: 375px;
+        height: 400px;
+        padding: 30px ;
+    }
+
+    .content .perfum h3 {
+        font-size: 0.7rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .content .perfum p {
+        line-height: 1.6rem;
+    }
+
+    .content .perfum a {
+        font-size: 0.9rem;
+        transition: 0ms;
+    }
+
+    .content .perfum a:hover {
+        background-color: hsl(158, 36%, 37%);
+    }
+
+    .content .perfum a .bx {
+        padding-right: 12px;
+    }
 }
